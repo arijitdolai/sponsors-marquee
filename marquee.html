@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Marquee Text</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #f4e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .marquee-wrap {
+    width: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 100s linear infinite;
+  }
+
+  .marquee-item {
+    flex: 0 0 auto;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #b8b1b1;
+    white-space: nowrap;
+    padding-right: 3rem;
+  }
+
+  @keyframes marquee-scroll {
+    from { transform: translateX(-40%); }
+    to   { transform: translateX(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <!-- Item repeated twice back-to-back so the loop is seamless at -50% -->
+      <span class="marquee-item">OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS</span>
+      <span class="marquee-item"> • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS • OUR SPONSORS</span>
+    </div>
+  </div>
+
+</body>
+</html>
