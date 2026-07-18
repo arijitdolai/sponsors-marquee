@@ -4,15 +4,7 @@
 <meta charset="UTF-8">
 <title>Combined</title>
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+  
 
   .marquee-wrap {
     width: 100%;
@@ -20,12 +12,6 @@
     font-family: sans-serif;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
     mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
-  }
-
-  .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee-scroll 100s linear infinite;
   }
 
   .marquee-item {
@@ -102,11 +88,6 @@
   }
 
   @keyframes marquee-scroll {
-    from { transform: translateX(-40%); }
-    to   { transform: translateX(0); }
-  }
-
-  @keyframes marquee-scroll {
     from { transform: translateX(0); }
     to   { transform: translateX(-25%); }
   }
@@ -117,9 +98,18 @@
     }
   }
 
-html,body{display:block!important;min-height:100vh;height:auto!important;background:#f3efec!important;}
-.container{padding:20px 0;}
+html,body{
+  display:block!important;
+  min-height:100vh;
+  height:auto!important;
+  background:#f3efec!important;
+}
+
+.container{padding:20px 0;
+}
+
 </style>
+
 </head>
 
 <body>
